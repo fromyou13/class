@@ -1,6 +1,6 @@
 const GLOBAL_DATES = {
-  start: "2025-01-05", // 공통 시작일
-  target: "2025-03-05", // 공통 목표일 (진행률 & D-Day 목표일)
+  start: "2025-03-04", // 공통 시작일
+  target: "2025-07-25", // 공통 목표일 (진행률 & D-Day 목표일)
 };
 
 function calculateProgress(startDate, endDate) {
