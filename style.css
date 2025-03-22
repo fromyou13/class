@@ -1,0 +1,611 @@
+@font-face {
+  font-family: "HakgyoansimDunggeunmisoTTF-B";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* 탑버튼 스타일 */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* 기본적으로 숨김 */
+  z-index: 1000;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(#0f9b0f, #38ef7d);
+  color: rgba(0, 0, 0, 0.795);
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#scrollTopBtn:hover {
+  background-color: rgba(5, 73, 20, 0.616);
+}
+/* 네비게이션 바 */
+.topnav {
+  display: flex;
+  justify-content: space-between; /* 좌우 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  background-color: #ffffff;
+  width: 100%;
+  padding: 15px 20px;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  font-family: "HakgyoansimDunggeunmisoTTF-B";
+}
+
+/* 로고 스타일 */
+.logo {
+  color: rgb(0, 0, 0);
+  font-size: 27px;
+  font-weight: bold;
+  padding-left: 200px;
+}
+
+/* 네비게이션 링크 스타일 */
+.nav-links {
+  display: flex;
+  margin-right: 200px;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  font-size: 27px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-links a:hover {
+  color: rgb(228, 84, 1);
+  border-radius: 5px;
+}
+
+.nav-links .active {
+  color: rgb(8, 228, 1);
+  border-radius: 5px;
+}
+
+/* 네비게이션 바 관련 끝 */
+
+/*Carousel start*/
+
+.carousel-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* 아래쪽 정렬 */
+  margin-bottom: 50px;
+  background-color: #00000062;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-caption p {
+  font-family: "HakgyoansimDunggeunmisoTTF-B";
+}
+
+.carousel-indicators button {
+  margin-right: 8px !important;
+  width: 8px !important; /* 크기 조절 */
+  height: 8px !important;
+  border-radius: 50% !important; /* 원형으로 변경 */
+  background-color: #fff !important; /* 배경색 변경 */
+  opacity: 0.5 !important; /* 기본 투명도 */
+  border: none !important; /* 버튼 기본 테두리 제거 */
+}
+
+.carousel-indicators .active {
+  opacity: 1 !important; /* 활성화된 버튼은 더 뚜렷하게 */
+  background-color: #ffffff !important; /* 활성화된 버튼 색상 변경 */
+}
+.c-item {
+  height: 88vh;
+}
+
+.c-img {
+  height: 100%;
+  filter: brightness(0.8);
+}
+/*carousel end*/
+
+/*페이지 타이틀*/
+.page-title {
+  background: linear-gradient(135deg, rgb(194, 13, 230), #00dcaf);
+  height: 75px;
+}
+
+.qwer {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+}
+
+/*페이지 타이틀 끝*/
+
+/*갤러리*/
+
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Lato&display=swap");
+
+* {
+  -webkit-transition: all 0.4s ease-out !important;
+
+  transition: all 0.4s ease-out !important;
+}
+
+/* MANSONRY */
+
+.gal {
+  margin-top: 3rem;
+  column-count: 4;
+}
+
+.gal img {
+  height: auto;
+}
+
+@media (max-width: 769px) {
+  .gal {
+    column-count: 1;
+  }
+}
+
+/* DESIGN */
+
+.gal-h-title {
+  text-align: center;
+}
+
+.gal img,
+.img-hover-zoom {
+  border-radius: 25px;
+}
+
+.nav-pills .nav-link {
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.nav-pills .nav-link.active:hover {
+  background: #4cb8c4;
+  background: linear-gradient(135deg, #523ee8, #00dcaf);
+  border-radius: 100px;
+}
+.nav-pills .nav-link:hover {
+  background: #4cb8c4;
+  background: linear-gradient(135deg, #523ee88c, #00dcaf6e);
+  border-radius: 100px;
+}
+
+.hiddena {
+  display: none;
+}
+
+/* ZOOM IN EFFECT */
+/* The tutorial I used : https://w3bits.com/css-image-hover-zoom/ */
+/* [1] The container */
+.img-hover-zoom {
+  padding: 10px 0;
+  overflow: hidden;
+  /* [1.2] Hide the overflowing of child elements */
+}
+
+/* Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+
+/* Zoom-n-rotate Container */
+.img-hover-zoom--zoom-n-rotate img {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* The Transformation */
+.img-hover-zoom--zoom-n-rotate:hover img {
+  transform: scale(1.8);
+}
+
+/*
+.img-hover-zoom--zoom-n-rotate:hover img {
+  transform: scale(1.6) rotate(25deg);
+}
+*/
+
+/* Feature Box---------------------*/
+.feature-box-1 {
+  padding: 32px;
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  margin: 15px 0;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.feature-box-1 * {
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+}
+.feature-box-1 .icon {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  background: #cf0f5f;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 22px;
+  font-size: 27px;
+}
+.feature-box-1 .icon i {
+  line-height: 70px;
+}
+.feature-box-1 h5 {
+  color: #20247b;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.feature-box-1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  border-radius: 10px;
+  width: 0;
+  background: linear-gradient(135deg, #dde83e, #00dcaf);
+  z-index: -1;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+}
+.feature-box-1:hover {
+  top: -5px;
+}
+.feature-box-1:hover h5 {
+  color: #000000;
+}
+.feature-box-1:hover p {
+  color: rgba(0, 0, 0, 0.8);
+}
+.feature-box-1:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  left: 0;
+  right: auto;
+}
+
+/*소행성*/
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #108d6f;
+  border-color: #108d6f;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007b5e;
+  border-color: #007b5e;
+}
+
+section {
+  padding: 30px 0;
+}
+
+section .section-title {
+  text-align: center;
+  color: #000000;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+#team .card {
+  border: none;
+  background: linear-gradient(45deg, #b2dfce, #ffdde1);
+  border-radius: 10px;
+  min-width: 275px;
+  min-height: 275px;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  transform: rotateY(0deg);
+  border-radius: 0.25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  transform: rotateY(-180deg);
+  box-shadow: 5px 7px 9px -4px rgba(158, 158, 158, 0.5);
+}
+
+.backside > .card {
+  margin-bottom: 3px;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn; /*속도임*/
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+} /*이거 없으면 안 돌아감*/
+
+.backside.special {
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(from var(--border-angle), rgb(236, 235, 238), rgb(239, 239, 240));
+
+  border: solid 5px transparent;
+  border-radius: 2em;
+  --gradient-border: conic-gradient(
+    from var(--border-angle),
+    rgb(255, 0, 221) 0%,
+    #08f 15%,
+    rgb(255, 0, 21) 35%,
+    rgb(255, 145, 0) 55%,
+    rgb(0, 255, 98) 80%,
+    #f03 100% /*퍼센트는 각도라고 생각하면 됨*/
+  );
+
+  background: var(--main-bg) padding-box, var(--gradient-border) border-box, var(--main-bg) border-box;
+  box-shadow: 5px 7px 9px -4px rgba(158, 158, 158, 0.5);
+  animation: rainbow-glow 2s infinite linear, bg-spin 3s linear infinite;
+}
+
+@keyframes rainbow-glow {
+  0% {
+    box-shadow: 0 0 20px 8px hsl(0, 100%, 70%);
+  }
+  20% {
+    box-shadow: 0 0 20px 8px hsl(60, 100%, 70%);
+  }
+  40% {
+    box-shadow: 0 0 20px 8px hsl(120, 100%, 70%);
+  }
+  60% {
+    box-shadow: 0 0 20px 8px hsl(180, 100%, 70%);
+  }
+  80% {
+    box-shadow: 0 0 20px 8px hsl(240, 100%, 70%);
+  }
+  100% {
+    box-shadow: 0 0 20px 8px hsl(300, 100%, 70%);
+  }
+}
+
+.backside.ufo {
+  background: conic-gradient(from var(--bbbbb), red, yellow, orange, navy, blue, purple, rgb(2, 255, 15), red);
+  padding: 5px;
+  animation: expert 2s linear infinite;
+}
+
+@keyframes expert {
+  from {
+    --bbbbb: 0deg;
+  }
+  to {
+    --bbbbb: 360deg;
+  }
+}
+
+@property --bbbbb {
+  syntax: "<angle>";
+  initial-value: 53deg;
+  inherits: false;
+}
+
+.backside.ufo::after {
+  content: "";
+  background: conic-gradient(from var(--bbbbb), red, purple, black, rgb(255, 255, 0), red);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: -50%, -50%;
+  z-index: -5;
+  filter: blur(20px);
+  opacity: 0.7;
+  animation: expert 2s linear infinite;
+}
+
+.backside.chick {
+  background: conic-gradient(
+    from var(--bbbbb),
+    red 0deg 15deg,
+    transparent 15deg 30deg,
+    rgb(255, 145, 0) 30deg 45deg,
+    transparent 45deg 60deg,
+
+    rgb(0, 247, 255) 60deg 75deg,
+    transparent 75deg 90deg,
+    rgb(22, 190, 0) 90deg 105deg,
+    transparent 105deg 120deg,
+
+    rgb(25, 0, 255) 120deg 135deg,
+    transparent 135deg 150deg,
+    rgb(3, 3, 133) 150deg 165deg,
+    transparent 165deg 180deg,
+
+    rgb(119, 0, 255) 180deg 195deg,
+    transparent 195deg 210deg,
+    rgb(255, 0, 0) 210deg 225deg,
+    transparent 225deg 240deg,
+
+    rgb(0, 255, 234) 240deg 255deg,
+    transparent 255deg 270deg,
+    rgb(21, 255, 0) 270deg 285deg,
+    transparent 285deg 300deg,
+
+    rgb(47, 0, 255) 300deg 315deg,
+    transparent 315deg 330deg,
+    rgb(247, 0, 255) 330deg 345deg,
+    transparent 345deg 360deg
+  );
+
+  padding: 5px;
+  animation: expert 2s linear infinite;
+}
+
+@keyframes expert {
+  from {
+    --bbbbb: 0deg;
+  }
+  to {
+    --bbbbb: 360deg;
+  }
+}
+
+@property --bbbbb {
+  syntax: "<angle>";
+  initial-value: 53deg;
+  inherits: false;
+}
+
+.frontside,
+.backside {
+  backface-visibility: hidden;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside.card,
+.backside.card {
+  min-height: 350px;
+}
+
+.backside .card a {
+  font-size: 18px;
+  color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: #000000 !important;
+  font-family: "HakgyoansimDunggeunmisoTTF-B";
+}
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 20%;
+}
+
+/*정거장*/
+
+.radius-10 {
+  border-radius: 10px !important;
+}
+
+.border-info {
+  border-left: 5px solid #0dcaf0 !important;
+}
+.border-danger {
+  border-left: 5px solid #fd3550 !important;
+}
+.border-success {
+  border-left: 5px solid #15ca20 !important;
+}
+.border-warning {
+  border-left: 5px solid #ffc107 !important;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+}
+
+.bg-gradient-scooter {
+  background: #17ead9;
+  background: linear-gradient(45deg, #17ead9, #6078ea) !important;
+}
+.widgets-icons-2 {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ededed;
+  font-size: 27px;
+  border-radius: 10px;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
+.text-white {
+  color: #fff !important;
+}
+.ms-auto {
+  margin-left: auto !important;
+}
+.bg-gradient-bloody {
+  background: #f54ea2;
+  background: -webkit-linear-gradient(45deg, #f54ea2, #ff7676) !important;
+  background: linear-gradient(45deg, #f54ea2, #ff7676) !important;
+}
+
+.bg-gradient-ohhappiness {
+  background: #00b09b;
+  background: -webkit-linear-gradient(45deg, #00b09b, #96c93d) !important;
+  background: linear-gradient(45deg, #00b09b, #96c93d) !important;
+}
+
+.bg-gradient-blooker {
+  background: #ffdf40;
+  background: -webkit-linear-gradient(45deg, #ffdf40, #ff8359) !important;
+  background: linear-gradient(45deg, #ffdf40, #ff8359) !important;
+}
